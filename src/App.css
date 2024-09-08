@@ -1,0 +1,203 @@
+/* Основные стили приложения */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif; /* Используем футуристичный шрифт */
+  background-color: #0b0e28; /* Очень темный фон */
+  color: white;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Навигационная панель */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(30, 30, 60, 0.95); /* Полупрозрачная навигация */
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Теневой эффект */
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #09ff9c; /* Неоновый цвет для логотипа */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 14px;
+}
+
+.catalog {
+  background: linear-gradient(135deg, #5a14ff, #ff14ff);
+  padding: 10px 20px;
+  border-radius: 50px; /* Скругленные углы для футуристичного вида */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.catalog:hover {
+  background: linear-gradient(135deg, #ff14ff, #5a14ff); /* Перелив при наведении */
+}
+
+/* Основной баннер */
+.banner {
+  text-align: center;
+  padding: 80px 0;
+  background-image: url('banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачная темная маска */
+}
+
+.banner h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+  text-transform: uppercase;
+  color: #09ff9c; /* Неоновый цвет заголовка */
+  text-shadow: 0 0 20px #09ff9c, 0 0 40px #09ff9c;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  z-index: 2;
+  position: relative;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.banner button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #5a14ff, #ff14ff);
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.banner button:hover {
+  background: linear-gradient(135deg, #ff14ff, #5a14ff);
+  transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+/* О нас */
+.about {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 0;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #09ff9c;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #09ff9c;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #b5b5ff;
+}
+
+.about button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #09ff9c, #ff14ff);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.about button:hover {
+  transform: scale(1.1);
+}
+
+/* Товары */
+.products {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.products h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #ff14ff;
+  text-shadow: 0 0 20px #ff14ff;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  background-color: rgba(30, 30, 60, 0.85);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.product-item p {
+  font-size: 16px;
+}
+
+.product-item .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #09ff9c;
+}
+
+.product-item .manufacturer {
+  font-size: 12px;
+  color: #aaa;
+}
